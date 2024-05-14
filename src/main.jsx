@@ -9,33 +9,36 @@ import ComponentContainer from "./components/componentContainer/ComponentContain
 import NotFound404 from "./components/NotFound/NotFound404";
 import "./index.css";
 
-const router = createBrowserRouter([
-  {
-    element: <Layout />,
-    children: [
-      {
-        path: "/",
-        element: <HomeComponent />,
-      },
-      {
-        path: "/signup",
-        element: <SignupForm />,
-      },
-      {
-        path: "/login",
-        element: <LoginForm />,
-      },
-      {
-        path: "/:component",
-        element: <ComponentContainer />,
-      },
-      {
-        path: "*",
-        element: <NotFound404 />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <HomeComponent />,
+        },
+        {
+          path: "/signup",
+          element: <SignupForm />,
+        },
+        {
+          path: "/login",
+          element: <LoginForm />,
+        },
+        {
+          path: "/:component",
+          element: <ComponentContainer />,
+        },
+        {
+          path: "*",
+          element: <NotFound404 />,
+        },
+      ],
+    },
+  ],
+  { basename: "/shoush-client/" }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
