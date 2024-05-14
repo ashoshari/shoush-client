@@ -21,7 +21,7 @@ function AddEmployee({ setAddEmployee }) {
 
   const { dispatch, getEmployees } = useContext(AuthContext);
 
-  const handleAdd = (e) => {
+  const handleAdd = () => {
     let errors = {};
 
     const isArabic =

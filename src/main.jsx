@@ -7,6 +7,7 @@ import SignupForm from "./components/componentContainer/formContainer/SignupForm
 import LoginForm from "./components/componentContainer/formContainer/LoginForm";
 import ComponentContainer from "./components/componentContainer/ComponentContainer";
 import NotFound404 from "./components/NotFound/NotFound404";
+import { AuthProvider } from "./context/AuthContext";
 import "./index.css";
 
 const router = createBrowserRouter(
@@ -42,6 +43,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
