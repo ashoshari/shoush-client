@@ -40,13 +40,13 @@ function TableContainer({ table }) {
         setData(employees);
       } else if (table === "Salary") {
         const response = await fetch(
-          "https://emp-dashboard-api-henna.vercel.app/get-salaries"
+          "https://shoush-api.vercel.app/get-salaries"
         );
         const data = await response.json();
         setData(data);
       } else if (table === "Vacation") {
         const response = await fetch(
-          "https://emp-dashboard-api-henna.vercel.app/get-vacations"
+          "https://shoush-api.vercel.app/get-vacations"
         );
         const data = await response.json();
         setData(data);
@@ -65,21 +65,15 @@ function TableContainer({ table }) {
 
   const handleApprove = (e, vacationId) => {
     if (e.target.value === "approve") {
-      fetch(
-        `https://emp-dashboard-api-henna.vercel.app/approve-vacation/${vacationId}`,
-        {
-          method: "POST",
-        }
-      ).then(() => {
+      fetch(`https://shoush-api.vercel.app/approve-vacation/${vacationId}`, {
+        method: "POST",
+      }).then(() => {
         setComponentShouldUpdate(!componentShouldUpdate);
       });
     } else {
-      fetch(
-        `https://emp-dashboard-api-henna.vercel.app/reject-vacation/${vacationId}`,
-        {
-          method: "POST",
-        }
-      ).then(() => {
+      fetch(`https://shoush-api.vercel.app/reject-vacation/${vacationId}`, {
+        method: "POST",
+      }).then(() => {
         setComponentShouldUpdate(!componentShouldUpdate);
       });
     }

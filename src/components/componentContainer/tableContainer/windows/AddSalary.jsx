@@ -18,7 +18,9 @@ function VacationsComponent({ setAddSalary, state, updateState }) {
 
   useEffect(() => {
     const getEmployees = async () => {
-      const response = await fetch("https://emp-dashboard-api-henna.vercel.app/get-employees");
+      const response = await fetch(
+        "https://shoush-api.vercel.app/get-employees"
+      );
       const data = await response.json();
 
       setEmployees(data);
@@ -54,7 +56,7 @@ function VacationsComponent({ setAddSalary, state, updateState }) {
         loan: Number(loan.current.value),
       };
 
-      await fetch(`https://emp-dashboard-api-henna.vercel.app/add-salary`, {
+      await fetch(`https://shoush-api.vercel.app/add-salary`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
