@@ -10,49 +10,49 @@ function ComponentContainer() {
 
   if (component === "employees") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <TableContainer table={"Employee"} />
       </div>
     );
   } else if (component === "projects") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <ProjectsComponent />
       </div>
     );
   } else if (component === "request-vacation") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <RequestVacationForm />
       </div>
     );
   } else if (component === "vacations") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <TableContainer table={"Vacation"} />
       </div>
     );
   } else if (component === "salaries") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <TableContainer table={"Salary"} />
       </div>
     );
   } else if (component === "reports") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <ReportsComponent />
       </div>
     );
   } else if (component === "careers") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <CareerForm />
       </div>
     );
   } else if (component === "contact") {
     return (
-      <div className="componentContainer px-3">
+      <div className="componentContainer" style={{ padding: "0 12px" }}>
         <ContactUsComponent />
       </div>
     );
